@@ -1,5 +1,5 @@
 ### PART A : DATA MODELLING ###
-v	1. identify entities
+	1. identify entities
 	2. identify relationships
 	3. identify attributes
 	4. identify pk and fk
@@ -26,19 +26,3 @@ v	1. identify entities
 	1. identify 5 database queries that will produce important information for the business
 	2. implement these queries in dml
 	3. each query with a short description of what it does and why it is important should appear in the document along with sample output
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
