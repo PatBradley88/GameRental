@@ -1,8 +1,8 @@
 ### PART A : DATA MODELLING ###
-	1. identify entities
-	2. identify relationships
-	3. identify attributes
-	4. identify pk and fk
+v	1. identify entities
+v	2. identify relationships
+v	3. identify attributes
+v	4. identify pk and fk
 	5. draw high-level conceptual erdata model
 	6. modify conceptual data model to produce logical relational data model
 	7. both conceptual and logical models should appear in the document
