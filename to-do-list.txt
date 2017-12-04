@@ -1,8 +1,8 @@
 ### PART A : DATA MODELLING ###
 v	1. identify entities
-	2. identify relationships
-	3. identify attributes
-	4. identify pk and fk
+v	2. identify relationships
+v	3. identify attributes
+v	4. identify pk and fk
 	5. draw high-level conceptual erdata model
 	6. modify conceptual data model to produce logical relational data model
 	7. both conceptual and logical models should appear in the document
@@ -26,19 +26,3 @@ v	1. identify entities
 	1. identify 5 database queries that will produce important information for the business
 	2. implement these queries in dml
 	3. each query with a short description of what it does and why it is important should appear in the document along with sample output
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
