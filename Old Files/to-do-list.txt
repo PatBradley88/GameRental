@@ -1,0 +1,28 @@
+### PART A : DATA MODELLING ###
+v	1. identify entities
+v	2. identify relationships
+v	3. identify attributes
+v	4. identify pk and fk
+	5. draw high-level conceptual erdata model
+	6. modify conceptual data model to produce logical relational data model
+	7. both conceptual and logical models should appear in the document
+
+
+### PART B : CREATE DATABASE STRUCTURE ###
+	1. create database for game rentals system
+	2. create database tables shoosing appropriate data types
+	3. identify primary keys and link tables by foreign keys
+	4. the ddl code for the database structure should appear in the document
+
+
+### PART C : LOAD DATABASE WITH APPROPRIATE DATA ###
+	1. use dml to load suitable data into the tables
+	2. take care not to compromise referential integrity when choosing foreign key values
+	3. you can use auto generation sites to produce data eg. www.generatedata.com
+	4. the dml code used to load data into the database should appear in the document
+
+
+### PART D : QUERYING AND REPORTING ###
+	1. identify 5 database queries that will produce important information for the business
+	2. implement these queries in dml
+	3. each query with a short description of what it does and why it is important should appear in the document along with sample output

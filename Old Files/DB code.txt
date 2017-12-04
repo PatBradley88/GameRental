@@ -1,0 +1,58 @@
+CREATE database GameStore;
+
+USE GameStore;
+
+CREATE TABLE Store(
+	store_id SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    store_name VARCHAR (45) NOT NULL    
+);
+
+CREATE TABLE Games(
+	game_id SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    title VARCHAR (45) NOT NULL,
+    publisher VARCHAR (45) NOT NULL,
+    genre VARCHAR(45) NOT NULL,
+    rental_limit TINYINT NOT NULL DEFAULT 3,
+    rental_rate DECIMAL(4,2) NOT NULL DEFAULT 4.50,
+	store_id SMALLINT,
+    FOREIGN KEY (store_id) REFERENCES Store(store_id)
+);
+
+CREATE TABLE Addresses(
+	address_id SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    address_1 VARCHAR (50),
+    address_2 VARCHAR (50),
+    post_code VARCHAR (10),
+    phone VARCHAR (15),
+    email VARCHAR (45)
+);
+
+CREATE TABLE Staff(
+	staff_id SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    s_name VARCHAR (45) NOT NULL,
+    s_surname VARCHAR (45) NOT NULL,
+    address_id SMALLINT,
+    FOREIGN KEY (address_id) REFERENCES addresses(address_id)
+);
+
+
+CREATE TABLE Customer(
+	cst_ID SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    cst_name VARCHAR (45) NOT NULL,
+    cst_surname VARCHAR (45) NOT NULL,
+    create_date DATE NOT NULL,
+    address_id SMALLINT,
+    FOREIGN KEY (address_id) REFERENCES Addresses(address_id)
+);
+
+
+CREATE TABLE Txn(
+	txn_id SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    rental_date DATE NOT NULL, 										
+    game_id SMALLINT NOT NULL,
+	FOREIGN KEY (game_id) REFERENCES game(game_id),
+    staff_id SMALLINT NOT NULL,
+	FOREIGN KEY (staff_id) REFERENCES Staff(staff_id),
+    cst_id SMALLINT NOT NULL,
+    FOREIGN KEY (cst_id) REFERENCES Customer(cst_id)
+);
