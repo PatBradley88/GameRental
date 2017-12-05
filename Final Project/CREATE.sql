@@ -32,7 +32,9 @@ CREATE TABLE Game(
 CREATE TABLE Staff(
 	staff_id SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     s_name VARCHAR (45) NOT NULL,
-    s_surname VARCHAR (45) NOT NULL/*,
+    s_surname VARCHAR (45) NOT NULL
+    store_id SMALLINT NOT NULL,
+		FOREIGN KEY store_id REFERENCES Store(store_id)/*,
     address_id SMALLINT,
     FOREIGN KEY (address_id) REFERENCES addresses(address_id) */ /*removed as not within scope of project*/
 );
