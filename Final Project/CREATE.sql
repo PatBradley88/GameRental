@@ -1,14 +1,13 @@
-/*CREATE database GameStore;
-
-USE GameStore;*/
+CREATE database GameStore;
+USE GameStore;
 
 CREATE TABLE Address(
 	address_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     address_1 VARCHAR (50),
     address_2 VARCHAR (50),
     post_code VARCHAR (10),
-    phone VARCHAR (15),
-    email VARCHAR (45)
+    phone VARCHAR (15) NOT NULL,
+    email VARCHAR (45) NOT NULL
 );
 
 CREATE TABLE Store(
@@ -32,10 +31,10 @@ CREATE TABLE Game(
 CREATE TABLE Staff(
 	staff_id SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     s_name VARCHAR (45) NOT NULL,
-    s_surname VARCHAR (45) NOT NULL
+    s_surname VARCHAR (45) NOT NULL,
     store_id SMALLINT NOT NULL,
-		FOREIGN KEY store_id REFERENCES Store(store_id)/*,
-    address_id SMALLINT,
+		FOREIGN KEY (store_id) REFERENCES Store(store_id)
+        /*, address_id SMALLINT,
     FOREIGN KEY (address_id) REFERENCES addresses(address_id) */ /*removed as not within scope of project*/
 );
 
