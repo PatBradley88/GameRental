@@ -1,5 +1,7 @@
+USE GameStore;
+
 /* #### INSERT DATA TO GAMES TABLE #### */
-/*
+
 INSERT INTO game (title, publisher, genre, rental_limit, rental_rate) 
 VALUES 
 	("A Game of Thrones: Genesis","Focus Home Interactive","Strategy",5,"5.50"),
@@ -59,10 +61,9 @@ VALUES
 	("A Druid's Duel","Harmonix Music Systems, Inc","Action, Adventure, Horror",2,"18.15"),
 	("A Duel Hand Disaster: Trackher","Cloak and Dagger Games","RPG",7,"16.00");
 
-*/
 
 /* #### INSERT CUSTOMER DATA (GENERATED AT HTTP://GENERATEDATA.COM) */
-/*
+
 INSERT INTO Customer (cst_name, cst_surname, join_date)
 VALUES 
 	("Harriet","Alvarez","08/07/13"),
@@ -72,7 +73,7 @@ VALUES
 	("Austin","Reilly","28/07/14"),
 	("Silas","Serrano","24/05/12"),
 	("Ivana","Sexton","09/08/12"),
-	("Roary","Montoya","17/01/11"), <--------------
+	("Roary","Montoya","17/01/11"),
 	("Halla","Buchanan","17/01/13"),
 	("Justina","Mullen","21/02/13"),
 	("Gabriel","Velazquez","04/09/15"),
@@ -166,20 +167,20 @@ VALUES
 	("Kay","Blackwell","18/03/18"),
 	("Hakeem","William","16/11/11")
     ;
-*/
+
 
 /* #### INSERT STORE DATA #### */
-/*INSERT INTO Store (store_name)
+INSERT INTO Store (store_name)
 VALUES 
 	("Flynn"),
 	("Walters"),
 	("Odonnell"),
 	("Murray")
 	;
-*/
+
 
 /* INSERT STAFF DATA*/
-/*INSERT INTO Staff (s_name, s_surname, store_id) 
+INSERT INTO Staff (s_name, s_surname, store_id) 
 VALUES 
 	("Amos","Sanford",3),
 	("Mannix","Flowers",1),
@@ -212,10 +213,10 @@ VALUES
 	("Wallace","Ford",3),
 	("Jordan","Stout",3)
 ;
-*/
+
 
 /* INSERT ADDRESS DATA */
-/*
+
 INSERT INTO Address (address_1,address_2,post_code,phone,email) 
 VALUES 
 	("8857 Duis Ave","Cheyenne","39-444","0304 127 4971","flynn@gamenation.net"),
@@ -320,7 +321,7 @@ VALUES
 	("4289 Odio Rd.","Koolkerke","P7Z 7T1","(0113) 971 0157","Etiam.bibendum.fermentum@egestasligula.ca"),
 	("6958 Aliquam Rd.","Orbais","49020-039","(0151) 972 0858","nunc.interdum@risus.net")
 ;
-*/
+
 
 
 /* #### INSERT TRANSACTION DATA #### */
@@ -377,5 +378,4 @@ VALUES
     ("2016-05-15 00:25:24",83,25,94,1),("2017-11-12 13:39:22",100,26,86,3),("2015-04-04 06:27:45",85,7,57,1),("2018-04-13 15:04:13",75,23,42,1),
     ("2013-06-08 06:36:15",64,4,3,4),("2012-09-13 05:19:35",97,4,80,4),("2016-01-08 15:00:02",78,25,71,4),("2017-06-16 10:44:54",83,6,27,4),
     ("2012-03-29 22:27:14",84,5,23,4),("2015-01-30 10:32:19",60,6,96,4),("2018-03-28 21:17:10",102,12,13,2),("2017-06-06 08:26:53",80,17,55,1);
-
 
