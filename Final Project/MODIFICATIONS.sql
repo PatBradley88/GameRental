@@ -16,9 +16,36 @@ ADD FOREIGN KEY (store_id) REFERENCES Store(store_id);
 */
 
 
+
+
 /*UPDATE Store
 SET address_id = 102
 WHERE store_id = 1;*/
+
+ALTER TABLE Txn 
+ADD return_date DATE;
+
+UPDATE Txn SET return_date = NULL WHERE txn_id = 346;
+UPDATE Txn SET return_date = NULL WHERE txn_id = 319;
+UPDATE Txn SET return_date = "2018-11-17" WHERE txn_id = 205;
+UPDATE Txn SET return_date = "2018-10-12" WHERE txn_id = 305;
+UPDATE Txn SET return_date = "2018-08-23" WHERE txn_id = 372;
+UPDATE Txn SET return_date = "2018-08-18" WHERE txn_id = 290;
+UPDATE Txn SET return_date = "2018-07-21" WHERE txn_id = 380;
+UPDATE Txn SET return_date = "2018-07-14" WHERE txn_id = 292;
+UPDATE Txn SET return_date = "2018-06-18" WHERE txn_id = 321;
+UPDATE Txn SET return_date = "2018-06-13" WHERE txn_id = 233;
+UPDATE Txn SET return_date = "2018-06-10" WHERE txn_id = 302;
+UPDATE Txn SET return_date = "2018-05-12" WHERE txn_id = 257;
+UPDATE Txn SET return_date = "2018-05-05" WHERE txn_id = 217;
+UPDATE Txn SET return_date = NULL WHERE txn_id = 272;
+UPDATE Txn SET return_date = "2018-04-27" WHERE txn_id = 234;
+UPDATE Txn SET return_date = "2018-04-16" WHERE txn_id = 392;
+UPDATE Txn SET return_date = "2018-03-30" WHERE txn_id = 399;
+UPDATE Txn SET return_date = "2018-03-27" WHERE txn_id = 352;
+UPDATE Txn SET return_date = "2018-03-02" WHERE txn_id = 252;
+UPDATE Txn SET return_date = "2018-02-18" WHERE txn_id = 344;
+
 
 UPDATE customer SET address_id = 106 WHERE cst_id = 1;
 UPDATE customer SET address_id = 107 WHERE cst_id = 2;
