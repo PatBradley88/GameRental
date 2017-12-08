@@ -25,3 +25,10 @@ SELECT * FROM game INNER JOIN txn ON game.game_id = txn.game_id ORDER BY rental_
 SELECT rental_date, rental_limit, rental_rate FROM txn INNER JOIN game ON game.game_id = txn.game_id ORDER BY rental_date;
 
 SELECT game_id, rental_rate FROM game INNER JOIN txn ON game.game_id = txn.game_id ORDER BY rental_rate;
+
+
+SELECT Txn.txn_id, Customer.cst_id, Customer.cst_name, Customer.cst_surname, Game.game_id, Game.title, Txn.rental_date, Txn.return_date
+FROM ((Txn 
+INNER JOIN Customer ON Txn.cst_id = Customer.cst_id)
+INNER JOIN Game ON Txn.game_id = Game.game_id)
+WHERE rental_date >= '2018-11-01' AND return_date IS NULL;
