@@ -1,7 +1,8 @@
-
 SELECT * FROM game WHERE game_id IN(
 	SELECT game_id FROM Txn WHERE cst_id = 6);
     
+SELECT * FROM txn WHERE game_id IN(
+	SELECT game_id FROM game WHERE rental_rate <= 04.50);
     
 SELECT * FROM staff WHERE store_id IN(
 	SELECT store_id FROM store WHERE store_name LIKE "%flynn%");
@@ -11,3 +12,16 @@ SELECT SUM(rental_rate) FROM game;
 SELECT COUNT(cst_name) FROM customer;
     
 SELECT COUNT(rental_date) FROM txn GROUP BY store_id;
+
+SELECT COUNT(txn_id) FROM txn WHERE store_id = 1;
+SELECT COUNT(txn_id) FROM txn WHERE store_id = 2;
+SELECT COUNT(txn_id) FROM txn WHERE store_id = 3;
+SELECT COUNT(txn_id) FROM txn WHERE store_id = 4;    
+
+SELECT * FROM game INNER JOIN txn ON game.game_id = txn.game_id WHERE DATEADD(rental_date, INTERVAL rental_limit DAY) < NOW();
+
+SELECT * FROM game INNER JOIN txn ON game.game_id = txn.game_id ORDER BY rental_date;
+
+SELECT rental_date, rental_limit, rental_rate FROM txn INNER JOIN game ON game.game_id = txn.game_id ORDER BY rental_date;
+
+SELECT game_id, rental_rate FROM game INNER JOIN txn ON game.game_id = txn.game_id ORDER BY rental_rate;
