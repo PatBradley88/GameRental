@@ -1,0 +1,13 @@
+
+SELECT * FROM game WHERE game_id IN(
+	SELECT game_id FROM Txn WHERE cst_id = 6);
+    
+    
+SELECT * FROM staff WHERE store_id IN(
+	SELECT store_id FROM store WHERE store_name LIKE "%flynn%");
+    
+SELECT SUM(rental_rate) FROM game;
+
+SELECT COUNT(cst_name) FROM customer;
+    
+SELECT COUNT(rental_date) FROM txn GROUP BY store_id;
